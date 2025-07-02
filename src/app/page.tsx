@@ -85,14 +85,11 @@ const bookingFormSchema = z.object({
   revenue: z.string().optional(),
   goals: z.string().min(10, "Please tell us a bit more about your goals (at least 10 characters)"),
 })
-
-const BookingCallModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean
-  onClose: () => void
-}) => {
+interface BookingCallModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+const BookingCallModal = ({ isOpen, onClose }: BookingCallModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
