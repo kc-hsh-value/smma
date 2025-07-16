@@ -486,7 +486,7 @@ const SocialProofSection = () => (
         <div className="container mx-auto px-4 text-center">
             <p className="text-gray-400 mb-8">Trusted by 500+ Brands</p>
             <div className="flex justify-center items-center space-x-12 opacity-60">
-                {["Brand1", "Brand2", "Brand3", "Brand4", "Brand5"].map((brand, index) => (
+                {["Youtube", "Tiktok", "Instagram", "X", "LinkedIn"].map((brand, index) => (
                     <div key={index} className="text-2xl font-bold text-gray-500">
                         {brand}
                     </div>
@@ -986,7 +986,7 @@ export default function LandingPage() {
       <main>
         <HeroSection onBookCallClick={() => setIsBookingModalOpen(true)} />
         <SocialProofSection />
-        <BeforeAfterSection />
+        {/* <BeforeAfterSection /> */}
         <VideoShowcaseSection onVideoSelect={setSelectedVideo} />
         <ServicesSection />
         <PricingSection
